@@ -1,3 +1,3 @@
 [submodule "wordpress/wp-content/themes/bearded"]
 	path = wordpress/wp-content/themes/bearded
-	url = https://github.com/cookingnutritious/bearded
+	url = ssh://git@github.com/cookingnutritious/bearded

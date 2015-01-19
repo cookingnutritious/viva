@@ -10,7 +10,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 if ( $order ) : ?>
-
+	<div class="woocommerce-thankyou">
 	<?php if ( $order->has_status( 'failed' ) ) : ?>
 
 		<p><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction.', 'woocommerce' ); ?></p>
@@ -57,9 +57,9 @@ if ( $order ) : ?>
 
 	<?php endif; ?>
 
-	<?php do_action( 'woocommerce_thankyou_' . $order->payment_method, $order->id ); ?>
-	<?php do_action( 'woocommerce_thankyou', $order->id ); ?>
-
+		<?php do_action( 'woocommerce_thankyou_' . $order->payment_method, $order->id ); ?>
+		<?php do_action( 'woocommerce_thankyou', $order->id ); ?>
+	</div>
 <?php else : ?>
 
 	<p><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), null ); ?></p>
